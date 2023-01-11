@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/add',userCtrl.addUsers)
+app.get('/read',userCtrl.readUsers)
+app.get('/read/:id',userCtrl.readUser)
+app.patch('/delete/:id',userCtrl.deleteUsers)
+app.delete('/delete/:id',userCtrl.deleteUsers)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
